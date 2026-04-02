@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSouira — L'écotourisme pour Essaouira</title>
+  <meta name="description" content="Découvrez l'écotourisme communautaire à Essaouira. Protégez la nature, valorisez la culture et gardez les revenus locaux. Rejoignez EcoSouira." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 6 C10 12, 6 18, 16 26 C26 18, 22 12, 16 6Z" fill="currentColor" opacity="0.3"/>
+          <path d="M16 8 C12 13, 9 17, 16 24 C23 17, 20 13, 16 8Z" fill="currentColor" opacity="0.6"/>
+          <path d="M14 18 Q16 14 18 18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+        <span>EcoSouira</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#ecotourisme" data-i18n="nav_about">C'est quoi ?</a></li>
+        <li><a href="#video" data-i18n="nav_video">Vidéo</a></li>
+        <li><a href="#flashcards" data-i18n="nav_flashcards">Quiz</a></li>
+        <li><a href="#participer" data-i18n="nav_participate">Participer</a></li>
+        <li class="lang-switcher">
+          <button class="lang-btn active" id="langFr" title="Français">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg>
+            FR
+          </button>
+          <button class="lang-btn" id="langEn" title="English">
+            EN
+          </button>
+          <button class="lang-btn" id="langAr" title="العربية">
+            عربي
+          </button>
+        </li>
+        <li><a href="#rejoindre" class="btn btn-nav" data-i18n="nav_join">Rejoindre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge" data-animate="fade-down">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" fill="#34D399"/></svg>
+        <span data-i18n="hero_badge">Pour la communauté d'Essaouira</span>
+      </div>
+      <h1 data-animate="fade-up" data-i18n="hero_title" data-i18n-html="true">
+        L'Écotourisme :<br/>
+        <span class="gradient-text">L'avenir d'Essaouira</span><br/>
+        est entre vos mains.
+      </h1>
+      <p class="hero-subtitle" data-animate="fade-up" data-delay="100" data-i18n="hero_subtitle">
+        Découvrez comment le tourisme peut profiter directement à notre communauté tout en protégeant notre nature.
+      </p>
+      <div class="hero-actions" data-animate="fade-up" data-delay="200">
+        <a href="#video" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span data-i18n="hero_cta_video">Voir la vidéo</span>
+        </a>
+        <a href="#ecotourisme" class="btn btn-ghost btn-lg" data-i18n="hero_cta_learn">En savoir plus</a>
+      </div>
+      <div class="hero-stats" data-animate="fade-up" data-delay="300">
+        <div class="stat">
+          <span class="stat-number" data-count="57">0</span><span class="stat-percent">%</span>
+          <span class="stat-label" data-i18n="stat_1">des habitants ne connaissent pas l'écotourisme</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="80">0</span><span class="stat-percent">%</span>
+          <span class="stat-label" data-i18n="stat_2">des revenus touristiques quittent la ville</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="0">0</span>
+          <span class="stat-label" data-i18n="stat_3">formations locales disponibles</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#ecotourisme" aria-label="Défiler vers le bas">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ ECOTOURISME ============ -->
+  <section class="section section-pillars" id="ecotourisme">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag" data-i18n="eco_tag">Comprendre</span>
+        <h2 data-i18n="eco_title">C'est quoi l'Écotourisme ?</h2>
+        <p class="section-desc" data-i18n="eco_desc" data-i18n-html="true">
+          L'écotourisme, c'est un tourisme <strong>responsable</strong>. Au lieu que l'argent des touristes parte ailleurs, il reste ici, chez nous à Essaouira. On protège notre nature, on valorise notre culture, et tout le monde en profite.
+        </p>
+      </div>
+      <div class="pillars-grid">
+        <!-- Card 1 -->
+        <div class="pillar-card" data-animate="fade-up" data-delay="0">
+          <div class="pillar-icon pillar-icon-env">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 44 C24 44, 6 30, 6 18 C6 10, 14 4, 24 12 C34 4, 42 10, 42 18 C42 30, 24 44, 24 44Z" fill="currentColor" opacity="0.15"/>
+              <path d="M24 44V20"/>
+              <path d="M24 28 C20 24, 16 26, 14 22"/>
+              <path d="M24 22 C28 18, 32 20, 34 16"/>
+            </svg>
+          </div>
+          <h3 data-i18n="pillar_env_title">Environnement</h3>
+          <p data-i18n="pillar_env_desc">Protéger nos plages, nos forêts d'arganiers, et la beauté naturelle de notre ville pour nos enfants.</p>
+          <div class="pillar-tag" data-i18n="pillar_env_tag">🌿 Nature</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="pillar-card" data-animate="fade-up" data-delay="100">
+          <div class="pillar-icon pillar-icon-soc">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="24" cy="16" r="8" fill="currentColor" opacity="0.15"/>
+              <circle cx="10" cy="22" r="5"/>
+              <circle cx="38" cy="22" r="5"/>
+              <path d="M4 40 C4 32, 10 28, 16 28"/>
+              <path d="M32 28 C38 28, 44 32, 44 40"/>
+              <path d="M14 36 C14 28, 20 24, 24 24 C28 24, 34 28, 34 36"/>
+            </svg>
+          </div>
+          <h3 data-i18n="pillar_soc_title">Social</h3>
+          <p data-i18n="pillar_soc_desc">Valoriser notre culture Souirie, notre artisanat local, nos traditions et notre savoir-faire ancestral.</p>
+          <div class="pillar-tag" data-i18n="pillar_soc_tag">🤝 Communauté</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="pillar-card" data-animate="fade-up" data-delay="200">
+          <div class="pillar-icon pillar-icon-eco">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="24" cy="24" r="16" fill="currentColor" opacity="0.15"/>
+              <path d="M24 12v6l4 4"/>
+              <circle cx="24" cy="24" r="2" fill="currentColor"/>
+              <path d="M16 38 L20 28 L24 32 L28 22 L32 30"/>
+            </svg>
+          </div>
+          <h3 data-i18n="pillar_eco_title">Économique</h3>
+          <p data-i18n="pillar_eco_desc">Garder les revenus du tourisme ici, pour les habitants d'Essaouira. Chaque dirham compte.</p>
+          <div class="pillar-tag" data-i18n="pillar_eco_tag">💰 Revenus locaux</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO ============ -->
+  <section class="section section-video" id="video">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag" data-i18n="video_tag">Apprendre</span>
+        <h2 data-i18n="video_title">Regardez cette vidéo pour tout comprendre</h2>
+        <p class="section-desc" data-i18n="video_desc">En quelques minutes, découvrez comment l'écotourisme peut transformer Essaouira et la vie de ses habitants.</p>
+      </div>
+      <div class="video-wrapper" data-animate="fade-up" data-delay="100">
+        <div class="video-container">
+          <div class="video-player" id="videoPlayer">
+            <video id="ecoVideo" preload="metadata">
+              <source src="videoeoeo.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <div class="video-overlay" id="videoOverlay">
+              <div class="video-play-btn" id="videoPlayBtn">
+                <svg viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="30" fill="white" opacity="0.2"/>
+                  <circle cx="32" cy="32" r="28" stroke="white" stroke-width="2"/>
+                  <polygon points="26,20 26,44 46,32" fill="white"/>
+                </svg>
+              </div>
+              <p class="video-label" data-i18n="video_click">▶ Cliquez pour regarder</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-features">
+          <div class="video-feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>4:22 min</span>
+          </div>
+          <div class="video-feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l2 2 4-4"/></svg>
+            <span data-i18n="video_feat_lang">En Darija</span>
+          </div>
+          <div class="video-feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            <span data-i18n="video_feat_audience">Pour tous</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLASHCARDS ============ -->
+  <section class="section section-flashcards" id="flashcards">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg> <span data-i18n="flash_tag">Apprendre</span></span>
+        <h2 data-i18n="flash_title">Testez vos connaissances</h2>
+        <p data-i18n="flash_desc">Cliquez sur chaque carte pour découvrir la réponse. Apprenez les faits clés sur l'écotourisme à Essaouira.</p>
+      </div>
+
+      <div class="flashcards-grid">
+        <!-- Card 1 -->
+        <div class="flashcard" data-animate="fade-up" tabindex="0">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="flashcard-emoji">💰</span>
+              <p class="flashcard-question" data-i18n="flash_q1">Quel pourcentage des revenus touristiques quitte Essaouira ?</p>
+              <span class="flashcard-hint" data-i18n="flash_hint">Cliquez pour retourner</span>
+            </div>
+            <div class="flashcard-back">
+              <span class="flashcard-emoji">💡</span>
+              <p class="flashcard-answer" data-i18n="flash_a1">Environ 70% des revenus touristiques quittent la ville vers les grandes chaînes hôtelières et les tour-opérateurs étrangers.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flashcard" data-animate="fade-up" data-delay="100" tabindex="0">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="flashcard-emoji">🌳</span>
+              <p class="flashcard-question" data-i18n="flash_q2">Quel rôle joue l'huile d'argan dans l'écotourisme ?</p>
+              <span class="flashcard-hint" data-i18n="flash_hint">Cliquez pour retourner</span>
+            </div>
+            <div class="flashcard-back">
+              <span class="flashcard-emoji">💡</span>
+              <p class="flashcard-answer" data-i18n="flash_a2">L'arganier est endémique de la région. Les coopératives féminines produisent l'huile d'argan, créant des emplois locaux et préservant la forêt.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="flashcard" data-animate="fade-up" data-delay="200" tabindex="0">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="flashcard-emoji">🐦</span>
+              <p class="flashcard-question" data-i18n="flash_q3">Combien d'espèces d'oiseaux migrateurs visitent Essaouira ?</p>
+              <span class="flashcard-hint" data-i18n="flash_hint">Cliquez pour retourner</span>
+            </div>
+            <div class="flashcard-back">
+              <span class="flashcard-emoji">💡</span>
+              <p class="flashcard-answer" data-i18n="flash_a3">Plus de 200 espèces d'oiseaux migrateurs passent par l'île de Mogador et les zones humides autour d'Essaouira chaque année.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="flashcard" data-animate="fade-up" tabindex="0">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="flashcard-emoji">🏘️</span>
+              <p class="flashcard-question" data-i18n="flash_q4">Qu'est-ce que le tourisme communautaire ?</p>
+              <span class="flashcard-hint" data-i18n="flash_hint">Cliquez pour retourner</span>
+            </div>
+            <div class="flashcard-back">
+              <span class="flashcard-emoji">💡</span>
+              <p class="flashcard-answer" data-i18n="flash_a4">C'est un modèle où les habitants gèrent directement l'accueil des visiteurs : hébergement, repas, visites guidées — sans intermédiaire.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="flashcard" data-animate="fade-up" data-delay="100" tabindex="0">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="flashcard-emoji">🎨</span>
+              <p class="flashcard-question" data-i18n="flash_q5">Comment l'écotourisme aide les artisans ?</p>
+              <span class="flashcard-hint" data-i18n="flash_hint">Cliquez pour retourner</span>
+            </div>
+            <div class="flashcard-back">
+              <span class="flashcard-emoji">💡</span>
+              <p class="flashcard-answer" data-i18n="flash_a5">Il permet aux artisans de vendre directement aux visiteurs, de fixer leurs propres prix et de valoriser leur savoir-faire ancestral.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="flashcard" data-animate="fade-up" data-delay="200" tabindex="0">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="flashcard-emoji">🌊</span>
+              <p class="flashcard-question" data-i18n="flash_q6">Quelles menaces environnementales pèsent sur Essaouira ?</p>
+              <span class="flashcard-hint" data-i18n="flash_hint">Cliquez pour retourner</span>
+            </div>
+            <div class="flashcard-back">
+              <span class="flashcard-emoji">💡</span>
+              <p class="flashcard-answer" data-i18n="flash_a6">Érosion côtière, surpêche, déforestation des arganiers et pollution plastique menacent l'écosystème fragile de la région.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTICIPER ============ -->
+  <section class="section section-participate" id="participer">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag" data-i18n="part_tag">Agir</span>
+        <h2 data-i18n="part_title">Comment je peux participer ?</h2>
+        <p class="section-desc" data-i18n="part_desc">Peu importe qui vous êtes, vous avez un rôle à jouer dans le futur d'Essaouira. Choisissez votre parcours.</p>
+      </div>
+      <div class="participate-grid">
+        <!-- Card 1 -->
+        <div class="participate-card" data-animate="fade-up" data-delay="0">
+          <div class="participate-number">01</div>
+          <div class="participate-emoji">🎨</div>
+          <h3 data-i18n="part_artisan_title">Je suis Artisan</h3>
+          <p data-i18n="part_artisan_desc" data-i18n-html="true">Vendez directement vos produits aux visiteurs, <strong>sans intermédiaire</strong>. Fixez vos prix, racontez votre histoire.</p>
+          <ul class="participate-benefits">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_artisan_b1">Vente directe</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_artisan_b2">Visibilité en ligne</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_artisan_b3">Formation gratuite</span>
+            </li>
+          </ul>
+          <a href="#rejoindre" class="btn btn-outline" data-i18n="part_cta">Commencer →</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="participate-card participate-card-featured" data-animate="fade-up" data-delay="100">
+          <div class="participate-badge" data-i18n="part_popular">Le plus populaire</div>
+          <div class="participate-number">02</div>
+          <div class="participate-emoji">🏠</div>
+          <h3 data-i18n="part_habitant_title">Je suis Habitant</h3>
+          <p data-i18n="part_habitant_desc">Proposez une expérience authentique : un repas chez vous, une balade guidée, ou un hébergement local.</p>
+          <ul class="participate-benefits">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_habitant_b1">Revenu complémentaire</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_habitant_b2">Échange culturel</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_habitant_b3">Accompagnement complet</span>
+            </li>
+          </ul>
+          <a href="#rejoindre" class="btn btn-primary" data-i18n="part_cta">Commencer →</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="participate-card" data-animate="fade-up" data-delay="200">
+          <div class="participate-number">03</div>
+          <div class="participate-emoji">🎓</div>
+          <h3 data-i18n="part_student_title">Je suis Étudiant</h3>
+          <p data-i18n="part_student_desc">Formez-vous aux métiers du tourisme durable et devenez un acteur du changement dans votre ville.</p>
+          <ul class="participate-benefits">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_student_b1">Formations gratuites</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_student_b2">Certificats reconnus</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span data-i18n="part_student_b3">Opportunités d'emploi</span>
+            </li>
+          </ul>
+          <a href="#rejoindre" class="btn btn-outline" data-i18n="part_cta">Commencer →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REJOINDRE ============ -->
+  <section class="section section-join" id="rejoindre">
+    <div class="container">
+      <div class="join-wrapper" data-animate="fade-up">
+        <div class="join-content">
+          <span class="section-tag section-tag-light" data-i18n="join_tag">Gratuit</span>
+          <h2 data-i18n="join_title">Rejoignez la communauté EcoSouira</h2>
+          <p data-i18n="join_desc" data-i18n-html="true">Recevez des <strong>formations gratuites</strong>, des conseils pratiques et des opportunités exclusives pour transformer Essaouira ensemble.</p>
+          <div class="join-trust">
+            <div class="join-avatars">
+              <div class="avatar" style="background: #0891b2;">S</div>
+              <div class="avatar" style="background: #059669;">M</div>
+              <div class="avatar" style="background: #d97706;">A</div>
+              <div class="avatar" style="background: #7c3aed;">F</div>
+            </div>
+            <span data-i18n="join_members">+120 membres déjà inscrits</span>
+          </div>
+        </div>
+        <form class="join-form under-development" id="joinForm" onsubmit="return handleSubmit(event)">
+          <div class="under-development-overlay">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span data-i18n="under_development">EN DÉVELOPPEMENT</span>
+          </div>
+          <div class="form-group">
+            <label for="name" data-i18n="form_name_label">Votre nom</label>
+            <input type="text" id="name" name="name" data-i18n-placeholder="form_name_placeholder" placeholder="Ex: Fatima, Youssef..." required />
+          </div>
+          <div class="form-group">
+            <label for="contact" data-i18n="form_contact_label">Email ou WhatsApp</label>
+            <input type="text" id="contact" name="contact" data-i18n-placeholder="form_contact_placeholder" placeholder="email@exemple.com ou 06XXXXXXXX" required />
+          </div>
+          <div class="form-group">
+            <label for="role" data-i18n="form_role_label">Vous êtes :</label>
+            <select id="role" name="role">
+              <option value="habitant" data-i18n="form_role_1">Habitant(e)</option>
+              <option value="artisan" data-i18n="form_role_2">Artisan(e)</option>
+              <option value="etudiant" data-i18n="form_role_3">Étudiant(e)</option>
+              <option value="autre" data-i18n="form_role_4">Autre</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+            <span data-i18n="form_submit">Rejoindre gratuitement</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note" data-i18n="form_note">🔒 Vos données restent privées. Aucun spam, promis.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 6 C10 12, 6 18, 16 26 C26 18, 22 12, 16 6Z" fill="currentColor" opacity="0.3"/>
+              <path d="M16 8 C12 13, 9 17, 16 24 C23 17, 20 13, 16 8Z" fill="currentColor" opacity="0.6"/>
+              <path d="M14 18 Q16 14 18 18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+            <span>EcoSouira</span>
+          </a>
+          <p data-i18n="footer_brand">Ensemble, faisons d'Essaouira un modèle d'écotourisme communautaire au Maroc.</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer_nav_title">Navigation</h4>
+          <a href="#ecotourisme" data-i18n="footer_nav_1">C'est quoi l'écotourisme ?</a>
+          <a href="#video" data-i18n="footer_nav_2">Vidéo éducative</a>
+          <a href="#participer" data-i18n="footer_nav_3">Comment participer</a>
+          <a href="#rejoindre" data-i18n="footer_nav_4">Nous rejoindre</a>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer_contact_title">Contact</h4>
+          <a href="#">contact@ecosouira.ma</a>
+          <a href="#">WhatsApp : +212 688 130 526</a>
+          <a href="#" data-i18n="footer_location">Essaouira, Maroc 🇲🇦</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer_copy">© 2026 EcoSouira — Fait avec ❤️ pour Essaouira</p>
+        <p data-i18n="footer_mission">Un projet pour le développement durable de notre communauté</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal-icon">🎉</div>
+      <h3 data-i18n="modal_title">Bienvenue dans la communauté !</h3>
+      <p data-i18n="modal_desc">Merci de nous avoir rejoint. Vous recevrez bientôt des informations sur les prochaines formations.</p>
+      <button class="btn btn-primary" onclick="closeModal()" data-i18n="modal_cta">C'est parti !</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
